@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Manrope', serif;
+}
+
+:root {
+  --Light-Cyan: hsl(193, 38%, 86%);
+  --Neon-Green: hsl(150, 100%, 66%);
+  --Grayish-Blue: hsl(217, 19%, 38%);
+  --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+  --Dark-Blue: hsl(218, 23%, 16%);
+}
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Dark-Blue);
+}
+.card {
+  padding: 1.8rem 2rem;
+
+  width: 31rem;
+  max-width: 90%;
+  border-radius: 0.6rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--Light-Cyan);
+  font-weight: 400;
+  h6 {
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--Neon-Green);
+  }
+  p {
+    text-align: center;
+
+    font-weight: 700;
+    font-size: clamp(1.125rem, 0.9009rem + 0.9434vw, 1.75rem);
+  }
+
+  background-color: var(--Dark-Grayish-Blue);
+}
+.decorations {
+  margin-block: 1.2rem 1.8rem;
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.decorations::after {
+  content: '';
+  width: 50%;
+  height: 0.01rem;
+  opacity: 0.3;
+  background-color: var(--Light-Cyan);
+}
+.decorations::before {
+  content: '';
+  width: 50%;
+  height: 0.01rem;
+  opacity: 0.3;
+  background-color: var(--Light-Cyan);
+}
+.icon {
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+  justify-content: center;
+}
+.icon::after {
+  content: '';
+  width: 4px;
+  height: 0.8rem;
+  border-radius: 2px;
+
+  background-color: var(--Light-Cyan);
+}
+.icon::before {
+  content: '';
+  width: 4px;
+  height: 0.8rem;
+  border-radius: 2px;
+
+  background-color: var(--Light-Cyan);
+}
+.btn {
+  background-color: var(--Neon-Green);
+
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  transform: translateY(50%);
+  bottom: 0;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0px 0px 44px 2px var(--Neon-Green);
+    -webkit-box-shadow: 0px 0px 44px 2px var(--Neon-Green);
+    -moz-box-shadow: 0px 0px 44px 2px var(--Neon-Green);
+  }
+}
