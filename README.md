@@ -1,6 +1,6 @@
 # Advice Generator App - Frontend Mentor Challenge
 
-![Design preview for the Advice Generator App challenge](./design/desktop-preview.jpg)
+![Design preview for the Advice Generator App challenge](./images/Screenshot%202025-02-12%20132320.png)
 
 ## Table of Contents
 
