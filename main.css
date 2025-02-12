@@ -10,7 +10,7 @@ body {
 
 :root {
   --Light-Cyan: hsl(193, 38%, 86%);
-  --Neon-Green: hsl(150, 100%, 66%);
+  --Neon-Green: rgb(82, 255, 168);
   --Grayish-Blue: hsl(217, 19%, 38%);
   --Dark-Grayish-Blue: hsl(217, 19%, 24%);
   --Dark-Blue: hsl(218, 23%, 16%);
@@ -117,4 +117,43 @@ body {
     -webkit-box-shadow: 0px 0px 44px 2px var(--Neon-Green);
     -moz-box-shadow: 0px 0px 44px 2px var(--Neon-Green);
   }
+}
+.loader {
+  width: 100px;
+  height: 100px;
+  margin-block: 2rem 1rem;
+  background: linear-gradient(
+    165deg,
+    rgba(82, 255, 168, 1) 0%,
+    rgb(3, 211, 107) 40%,
+    rgb(2, 135, 68) 98%,
+    rgb(10, 10, 10) 100%
+  );
+  border-radius: 50%;
+  position: relative;
+}
+
+.loader:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border-bottom: 0 solid #ffffff05;
+  box-shadow: 0 -10px 20px 20px #ffffff40 inset,
+    0 -5px 15px 10px #ffffff50 inset, 0 -2px 5px #ffffff80 inset,
+    0 -3px 2px #84ad96 inset, 0 2px 0px #759684, 0 2px 3px #475d50,
+    0 5px 5px #ffffff90, 0 10px 15px #ffffff60, 0 10px 20px 20px #ffffff40;
+  filter: blur(3px);
+  animation: 2s rotate linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.d-none {
+  display: none;
 }
